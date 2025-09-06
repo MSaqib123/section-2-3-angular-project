@@ -81,8 +81,6 @@
 // but we can also add  modules in    standAlon components  also   Example : (NewTask -> formModule)
 // ************************
 
-// this
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -90,11 +88,12 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Class_8_to_10/header/header.component';
 import { UserComponent } from './Class_8_to_10/user/user.component';
-import { TasksComponent } from './Class_8_to_10/tasks/tasks.component';
-// import { CardComponent } from './Class_8_to_10/shared/card/card.component';
-import { TaskComponent } from './Class_8_to_10/tasks/task/task.component';
-import { NewTaskComponent } from './Class_8_to_10/tasks/new-task/new-task.component';
 import { SharedModule } from './Class_8_to_10/shared/shared.module';
+import { TasksModule } from './Class_8_to_10/tasks/tasks.module';
+// import { TasksComponent } from './Class_8_to_10/tasks/tasks.component';
+// import { CardComponent } from './Class_8_to_10/shared/card/card.component';
+// import { TaskComponent } from './Class_8_to_10/tasks/task/task.component';
+// import { NewTaskComponent } from './Class_8_to_10/tasks/new-task/new-task.component';
 
 @NgModule({
   declarations: [
@@ -102,13 +101,13 @@ import { SharedModule } from './Class_8_to_10/shared/shared.module';
     HeaderComponent,
     UserComponent,
     // CardComponent,   //Now inside the SharedModule simple
-    TasksComponent,
-    TaskComponent,
-    NewTaskComponent,
+    // TasksComponent,     // converted to TasksModule
+    // TaskComponent,      // converted to TasksModule
+    // NewTaskComponent,    // converted to TasksModule
   ],
   bootstrap: [AppComponent],
   // imports: [BrowserModule, HeaderComponent, UserComponent, TasksComponent],
-  imports: [BrowserModule, FormsModule, SharedModule],
+  imports: [BrowserModule, SharedModule, TasksModule],
 })
 export class AppModule {}
 

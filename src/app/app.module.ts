@@ -91,23 +91,24 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Class_8_to_10/header/header.component';
 import { UserComponent } from './Class_8_to_10/user/user.component';
 import { TasksComponent } from './Class_8_to_10/tasks/tasks.component';
-import { CardComponent } from './Class_8_to_10/shared/card/card.component';
+// import { CardComponent } from './Class_8_to_10/shared/card/card.component';
 import { TaskComponent } from './Class_8_to_10/tasks/task/task.component';
 import { NewTaskComponent } from './Class_8_to_10/tasks/new-task/new-task.component';
+import { SharedModule } from './Class_8_to_10/shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     UserComponent,
-    CardComponent,
+    // CardComponent,   //Now inside the SharedModule simple
     TasksComponent,
     TaskComponent,
     NewTaskComponent,
   ],
   bootstrap: [AppComponent],
   // imports: [BrowserModule, HeaderComponent, UserComponent, TasksComponent],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, SharedModule],
 })
 export class AppModule {}
 

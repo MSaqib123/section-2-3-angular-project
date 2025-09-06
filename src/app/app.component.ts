@@ -33,9 +33,40 @@
 //
 //
 //===================================
-// ======= Class_3_to_5 =============
+// ======= Class_3_to_6 =============
 //===================================
-//#region   Class_2_to_5
+//#region   Class_2_to_6
+// import { Component } from '@angular/core';
+// import { DUMMY_USERS } from './dummy-users';
+
+// @Component({
+//   selector: 'app-root',
+//   templateUrl: './app.component.html',
+//   styleUrl: './app.component.css',
+
+//   //=========== disable the standalone component =========
+//   standalone: false,
+//   // imports: [HeaderComponent, UserComponent, TasksComponent, NgFor, NgIf],
+// })
+// export class AppComponent {
+//   users = DUMMY_USERS;
+//   selectedUserId!: string;
+
+//   get onSelectUserObj() {
+//     return this.users.find((user) => user.id === this.selectedUserId)!;
+//   }
+//   onSelectUser(id: string) {
+//     this.selectedUserId = id;
+//   }
+// }
+//#endregion
+
+//
+//
+//===================================
+// ======= Class_8_to_10 =============
+//===================================
+//#region   Class_10_to_10
 import { Component } from '@angular/core';
 import { DUMMY_USERS } from './dummy-users';
 

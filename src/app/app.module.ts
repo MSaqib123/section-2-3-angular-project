@@ -45,18 +45,69 @@
 
 // this
 
+// import { NgModule } from '@angular/core';
+// import { BrowserModule } from '@angular/platform-browser';
+
+// import { AppComponent } from './app.component';
+// import { HeaderComponent } from './Class_3_to_6/header/header.component';
+// import { UserComponent } from './Class_3_to_6/user/user.component';
+// import { TasksComponent } from './Class_3_to_6/tasks/tasks.component';
+
+// @NgModule({
+//   declarations: [AppComponent],
+//   bootstrap: [AppComponent],
+//   imports: [BrowserModule, HeaderComponent, UserComponent, TasksComponent],
+// })
+// export class AppModule {}
+
+//#endregion
+
+//
+//
+//
+//
+//
+//===================================
+// ======= Class_7_ =============
+//===================================
+//#region   Class_7_
+
+// ************************
+// A First Summary
+// 1. Non-standalon component undestanding
+
+// Note
+// we know now we can add    non-standalon component in  modules   and standAlon component     to  app.module
+// but we can also add  modules in    standAlon components  also   Example : (NewTask -> formModule)
+// ************************
+
+// this
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './Class_3_to_6/header/header.component';
-import { UserComponent } from './Class_3_to_6/user/user.component';
-import { TasksComponent } from './Class_3_to_6/tasks/tasks.component';
+import { HeaderComponent } from './Class_8_to_10/header/header.component';
+import { UserComponent } from './Class_8_to_10/user/user.component';
+import { TasksComponent } from './Class_8_to_10/tasks/tasks.component';
+import { CardComponent } from './Class_8_to_10/shared/card/card.component';
+import { TaskComponent } from './Class_8_to_10/tasks/task/task.component';
+import { NewTaskComponent } from './Class_8_to_10/tasks/new-task/new-task.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    UserComponent,
+    CardComponent,
+    TasksComponent,
+    TaskComponent,
+    NewTaskComponent,
+  ],
   bootstrap: [AppComponent],
-  imports: [BrowserModule, HeaderComponent, UserComponent, TasksComponent],
+  // imports: [BrowserModule, HeaderComponent, UserComponent, TasksComponent],
+  imports: [BrowserModule, FormsModule],
 })
 export class AppModule {}
 

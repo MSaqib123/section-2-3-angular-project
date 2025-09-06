@@ -1,0 +1,22 @@
+@if(isAddingTask){
+    <app-new-task (hideTaskUI)="hideTaskUI()" [userId]="userId"/>
+}
+<section id="tasks">
+    <header>
+        <h2>{{NameOfUser}}'s Tasks</h2>
+        <menu>
+            <button (click)="showAddTask()">Add Task</button>
+        </menu>
+    </header>
+
+
+    <ul>
+        @for(task of selectedUserTasks; track task)
+        {
+            <li>
+                <app-task [task]="task" />
+            </li>
+        }
+    </ul>
+
+</section>

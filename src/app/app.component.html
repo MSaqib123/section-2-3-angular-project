@@ -1,0 +1,37 @@
+<!-- _______ Long way __________-->
+<!-- <app-header></app-header>
+<app-user></app-user> -->
+
+<!-- _______ Short way __________-->
+<app-header/>
+
+
+<main>
+  <ul id="users">
+    @for(user of users; track user.id)
+    {
+      <li>
+          <app-user [user]="user" (select) = "onSelectUser($event)"  [selected]="user.id===selectedUserId"/>
+      </li>
+    }
+    <!-- <li *ngFor="let user of users">
+      <app-user [user]="user" (select) = "onSelectUser($event)" />
+    </li> -->
+  </ul>
+
+
+  <!-- =================================== -->
+   <!-- Structrual Director   Older Anguelr -->
+  <!-- =================================== -->
+  <!-- <app-tasks *ngIf="onSelectUserObj else fallback" [NameOfUser]="onSelectUserObj!.name"/>
+  <ng-template #fallback>
+    <p id="fallback">Select a user to see their tasks!</p>
+  </ng-template> -->
+
+  @if(onSelectUserObj){
+    <app-tasks [NameOfUser]="onSelectUserObj.name" [userId]="onSelectUserObj.id" />
+  }
+  @else{
+    <p id="fallback">Select a user to see their tasks!</p>
+  }
+</main>

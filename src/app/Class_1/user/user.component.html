@@ -1,0 +1,10 @@
+<app-card>
+    <button (click)="ChangeUser()" [class.active]="selected">
+        <!-- =================================== -->
+        <!-- NOTE Advance  TypeScript -->
+        <!-- =================================== -->
+        <img [src]="ImagePath" [alt]="user.name" width="100">
+        <span>{{user.name}}</span>
+    </button>
+
+</app-card>

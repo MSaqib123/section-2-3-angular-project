@@ -3,16 +3,12 @@
 //===================================
 //#region   Class_1_to_2
 import { Component } from '@angular/core';
-import { HeaderComponent } from './Class_1/header/header.component';
-import { UserComponent } from './Class_1/user/user.component';
-import { DUMMY_USERS } from './dummy-users';
-import { TasksComponent } from './Class_1/tasks/tasks.component';
+import { NgFor, NgIf } from '@angular/common';
 
-//===================================
-//  Structrual Director   Older Anguelr
-//===================================
-import { NgFor } from '@angular/common';
-import { NgIf } from '@angular/common';
+import { HeaderComponent } from './Class_1_to_2/header/header.component';
+import { UserComponent } from './Class_1_to_2/user/user.component';
+import { TasksComponent } from './Class_1_to_2/tasks/tasks.component';
+import { DUMMY_USERS } from './dummy-users';
 
 @Component({
   selector: 'app-root',
